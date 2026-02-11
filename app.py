@@ -130,32 +130,20 @@ PAIN_QUALITY_OPTIONS = [
 ]
 
 PAIN_TISSUE_MAP = {
-    "抽筋感": ["muscle"],
-    "鈍痛": ["muscle", "ligament", "bone"],
+    "抽筋感": ["muscle"], "鈍痛": ["muscle", "ligament", "bone"],
     "酸痛": ["muscle", "ligament", "sympathetic"],
-    "尖銳痛": ["nerve_root", "nerve", "fracture"],
-    "陣陣刺痛": ["nerve_root"],
-    "閃電般痛": ["nerve"],
-    "灼熱感": ["sympathetic"],
-    "有壓力感": ["sympathetic"],
-    "針蟄感": ["sympathetic"],
-    "深部痛": ["bone"],
-    "煩人的隱痛": ["bone"],
-    "尖銳且無法忍受": ["fracture"],
-    "抽痛": ["vascular"],
-    "擴散的": ["vascular"],
+    "尖銳痛": ["nerve_root", "nerve", "fracture"], "陣陣刺痛": ["nerve_root"],
+    "閃電般痛": ["nerve"], "灼熱感": ["sympathetic"], "有壓力感": ["sympathetic"],
+    "針蟄感": ["sympathetic"], "深部痛": ["bone"], "煩人的隱痛": ["bone"],
+    "尖銳且無法忍受": ["fracture"], "抽痛": ["vascular"], "擴散的": ["vascular"],
     "按壓痛": ["muscle"],
 }
 
 TISSUE_LABELS = {
-    "muscle": "肌肉 (Muscle)",
-    "ligament": "韌帶 / 關節囊 (Ligament / Capsule)",
-    "nerve_root": "神經根 (Nerve Root)",
-    "nerve": "周邊神經 (Peripheral Nerve)",
+    "muscle": "肌肉 (Muscle)", "ligament": "韌帶 / 關節囊 (Ligament / Capsule)",
+    "nerve_root": "神經根 (Nerve Root)", "nerve": "周邊神經 (Peripheral Nerve)",
     "sympathetic": "交感神經 / 神經病變 (Sympathetic / Neuropathic)",
-    "bone": "骨骼 (Bone)",
-    "fracture": "骨折 (Fracture)",
-    "vascular": "血管 (Vascular)",
+    "bone": "骨骼 (Bone)", "fracture": "骨折 (Fracture)", "vascular": "血管 (Vascular)",
 }
 
 TISSUE_CHIP = {
@@ -215,54 +203,14 @@ LOCKING = {
 }
 
 JOINT_PAIN = {
-    "cervical": {
-        "young": "頸椎小面關節功能障礙、韌帶過度拉伸、姿勢性關節壓力",
-        "older": "頸椎小面關節退化、椎間盤退化性變化、鉤椎關節增生",
-        "note_young": "年輕族群較少退化性問題，通常與姿勢、使用習慣或外傷有關",
-        "note_older": "40 歲以上較常見退化性變化，但影像退化不一定等於症狀來源",
-    },
-    "shoulder": {
-        "young": "肩鎖關節損傷、盂肱關節韌帶鬆弛、肩關節不穩定",
-        "older": "肩鎖關節退化、盂肱關節退化、旋轉肌群慢性損傷",
-        "note_young": "年輕族群肩膀鈍痛較常與過度使用或運動傷害有關",
-        "note_older": "深層鈍痛且夜間加劇需注意旋轉肌群病變",
-    },
-    "wrist_hand": {
-        "young": "腕關節韌帶扭傷、TFCC 損傷、關節囊發炎",
-        "older": "CMC 關節退化、Heberden's nodes、舟月骨韌帶損傷",
-        "note_young": "年輕族群手部關節問題多與重複動作或運動外傷有關",
-        "note_older": "好發拇指基部與指末端關節",
-    },
-    "lumbar": {
-        "young": "腰椎小面關節功能障礙、韌帶過度負荷、薦髂關節功能異常、椎間盤早期損傷",
-        "older": "腰椎小面關節退化、椎間盤退化、薦髂關節功能障礙",
-        "note_young": "年輕族群的腰椎關節問題通常與姿勢不良、負重方式或核心不足有關，不一定代表退化",
-        "note_older": "退化性變化常見但不一定是疼痛主因，需結合理學檢查",
-    },
-    "hip": {
-        "young": "髖關節唇損傷、股骨髖臼夾擠（FAI）、髖關節韌帶扭傷",
-        "older": "髖關節退化性關節炎、股骨頭缺血性壞死、髖關節唇損傷",
-        "note_young": "年輕族群髖部鈍痛需注意 FAI 或關節唇問題，尤其好發於運動族群",
-        "note_older": "典型為鼠蹊部深層鈍痛，活動後改善",
-    },
-    "knee": {
-        "young": "髕骨軟化症、韌帶扭傷（ACL/MCL）、滑膜皺壁症候群、半月板損傷",
-        "older": "退化性關節炎、軟骨磨損、髕骨軟化症",
-        "note_young": "年輕族群膝蓋鈍痛較常與運動負荷、肌力不平衡或韌帶問題有關",
-        "note_older": "晨僵：起床後僵硬，活動後改善",
-    },
-    "ankle": {
-        "young": "踝關節韌帶扭傷後遺、距骨軟骨損傷、踝關節不穩定",
-        "older": "踝關節退化性關節炎、距骨軟骨損傷、足弓結構異常",
-        "note_young": "年輕族群踝關節鈍痛常見於反覆扭傷後的慢性不穩定",
-        "note_older": "反覆扭傷可能提早退化",
-    },
-    "general": {
-        "young": "關節囊損傷、韌帶過度負荷",
-        "older": "退化性關節變化、軟骨磨損",
-        "note_young": "年輕族群較少退化問題，多與使用方式有關",
-        "note_older": "持續加重建議影像檢查",
-    },
+    "cervical": {"young": "頸椎小面關節功能障礙、韌帶過度拉伸、姿勢性關節壓力", "older": "頸椎小面關節退化、椎間盤退化性變化、鉤椎關節增生", "note_young": "年輕族群較少退化性問題，通常與姿勢、使用習慣或外傷有關", "note_older": "40 歲以上較常見退化性變化，但影像退化不一定等於症狀來源"},
+    "shoulder": {"young": "肩鎖關節損傷、盂肱關節韌帶鬆弛、肩關節不穩定", "older": "肩鎖關節退化、盂肱關節退化、旋轉肌群慢性損傷", "note_young": "年輕族群肩膀鈍痛較常與過度使用或運動傷害有關", "note_older": "深層鈍痛且夜間加劇需注意旋轉肌群病變"},
+    "wrist_hand": {"young": "腕關節韌帶扭傷、TFCC 損傷、關節囊發炎", "older": "CMC 關節退化、Heberden's nodes、舟月骨韌帶損傷", "note_young": "年輕族群手部關節問題多與重複動作或運動外傷有關", "note_older": "好發拇指基部與指末端關節"},
+    "lumbar": {"young": "腰椎小面關節功能障礙、韌帶過度負荷、薦髂關節功能異常、椎間盤早期損傷", "older": "腰椎小面關節退化、椎間盤退化、薦髂關節功能障礙", "note_young": "年輕族群的腰椎關節問題通常與姿勢不良、負重方式或核心不足有關，不一定代表退化", "note_older": "退化性變化常見但不一定是疼痛主因，需結合理學檢查"},
+    "hip": {"young": "髖關節唇損傷、股骨髖臼夾擠（FAI）、髖關節韌帶扭傷", "older": "髖關節退化性關節炎、股骨頭缺血性壞死、髖關節唇損傷", "note_young": "年輕族群髖部鈍痛需注意 FAI 或關節唇問題，尤其好發於運動族群", "note_older": "典型為鼠蹊部深層鈍痛，活動後改善"},
+    "knee": {"young": "髕骨軟化症、韌帶扭傷（ACL/MCL）、滑膜皺壁症候群、半月板損傷", "older": "退化性關節炎、軟骨磨損、髕骨軟化症", "note_young": "年輕族群膝蓋鈍痛較常與運動負荷、肌力不平衡或韌帶問題有關", "note_older": "晨僵：起床後僵硬，活動後改善"},
+    "ankle": {"young": "踝關節韌帶扭傷後遺、距骨軟骨損傷、踝關節不穩定", "older": "踝關節退化性關節炎、距骨軟骨損傷、足弓結構異常", "note_young": "年輕族群踝關節鈍痛常見於反覆扭傷後的慢性不穩定", "note_older": "反覆扭傷可能提早退化"},
+    "general": {"young": "關節囊損傷、韌帶過度負荷", "older": "退化性關節變化、軟骨磨損", "note_young": "年輕族群較少退化問題，多與使用方式有關", "note_older": "持續加重建議影像檢查"},
 }
 
 ROM_LOSS = {
@@ -277,7 +225,12 @@ ROM_LOSS = {
 }
 
 
+# ==============================================================
+# 表單
+# ==============================================================
 with st.form("intake_form"):
+
+    # === 1. 基本資料 ===
     st.markdown('<div class="main-header">1. 基本資料</div>', unsafe_allow_html=True)
     c1, c2 = st.columns(2)
     with c1:
@@ -289,6 +242,7 @@ with st.form("intake_form"):
         "久站服務類 (專櫃/餐飲)", "家務操持", "運動員/教練", "退休/其他"
     ])
 
+    # === 2. 患處定位與病程 ===
     st.markdown('<div class="main-header">2. 患處定位與病程</div>', unsafe_allow_html=True)
     pain_location = st.selectbox("主要疼痛位置", [
         "-- 請選擇 --", "頸椎 / 頭部", "肩膀 / 上肢", "手肘 / 手腕 / 手指",
@@ -318,11 +272,59 @@ with st.form("intake_form"):
         "有時候痛的位置會跑來跑去",
     ], index=0)
 
+    # === 3. 疼痛性質 ===
     st.markdown('<div class="main-header">3. 疼痛性質（依 Magee 分類）</div>', unsafe_allow_html=True)
     st.caption("不同的疼痛感覺對應不同的組織來源")
     pain_quality = st.multiselect("您的疼痛感覺最接近哪些？（可複選）", PAIN_QUALITY_OPTIONS)
 
-    st.markdown('<div class="main-header">4. 危險徵兆篩檢（Red Flags）</div>', unsafe_allow_html=True)
+    # === 4. 就醫與檢查紀錄 ===
+    st.markdown('<div class="main-header">4. 就醫與檢查紀錄</div>', unsafe_allow_html=True)
+    st.caption("了解您過去的檢查紀錄，有助於避免重複建議，也能讓分析更精準")
+
+    exam_history = st.multiselect(
+        "針對這次的問題，您做過哪些檢查？（可複選）",
+        [
+            "尚未就醫或做任何檢查",
+            "已看過醫生（門診）",
+            "照過 X 光",
+            "照過 MRI / CT",
+            "做過超音波",
+            "做過神經傳導檢查（NCV / EMG）",
+            "做過抽血 / 血液檢查",
+        ],
+        default=["尚未就醫或做任何檢查"]
+    )
+
+    has_done_exam = "尚未就醫或做任何檢查" not in exam_history and len(exam_history) > 0
+
+    exam_result = None
+    exam_dx_detail = []
+    if has_done_exam:
+        st.markdown('<div class="section-label">檢查結果大致是？</div>', unsafe_allow_html=True)
+        exam_result = st.radio("醫生怎麼說？", [
+            "說沒什麼大問題 / 結構正常",
+            "有發現一些問題（請在下方勾選）",
+            "還在等報告 / 不太確定",
+        ], index=0)
+
+        if exam_result and "有發現一些問題" in exam_result:
+            st.markdown('<div class="section-label">醫生提到的問題方向（可複選）</div>', unsafe_allow_html=True)
+            exam_dx_detail = st.multiselect("請選擇醫生提到的診斷方向：", [
+                "椎間盤突出 / 椎間盤問題",
+                "骨刺 / 退化性變化",
+                "椎管狹窄 / 椎間孔狹窄",
+                "肌腱炎 / 肌腱損傷",
+                "韌帶損傷 / 韌帶鬆弛",
+                "半月板損傷",
+                "關節炎 / 軟骨磨損",
+                "骨折 / 裂縫",
+                "神經壓迫 / 神經損傷",
+                "肌筋膜疼痛 / 肌肉問題",
+                "其他（報告中未列出）",
+            ])
+
+    # === 5. 危險徵兆篩檢 ===
+    st.markdown('<div class="main-header">5. 危險徵兆篩檢（Red Flags）</div>', unsafe_allow_html=True)
     st.info("以下項目用於排除需要立即就醫的狀況。")
     selected_red_flags = st.multiselect("若無下列症狀請選擇「皆沒有」：", [
         "皆沒有",
@@ -335,7 +337,8 @@ with st.form("intake_form"):
         "胸痛伴隨呼吸困難"
     ], default=["皆沒有"])
 
-    st.markdown('<div class="main-header">5. 伴隨症狀與功能影響</div>', unsafe_allow_html=True)
+    # === 6. 伴隨症狀與功能影響 ===
+    st.markdown('<div class="main-header">6. 伴隨症狀與功能影響</div>', unsafe_allow_html=True)
     cs1, cs2 = st.columns(2)
     with cs1:
         st.markdown('<div class="section-label">伴隨症狀（可複選）</div>', unsafe_allow_html=True)
@@ -351,7 +354,8 @@ with st.form("intake_form"):
         if st.checkbox("需要藥物止痛"): impacts.append("需藥物止痛")
         if st.checkbox("容易失去平衡 / 跌倒"): impacts.append("失去平衡")
 
-    st.markdown('<div class="main-header">6. 動作模式檢測</div>', unsafe_allow_html=True)
+    # === 7. 動作模式檢測 ===
+    st.markdown('<div class="main-header">7. 動作模式檢測</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-label">什麼情況會讓疼痛加劇？（誘發因子）</div>', unsafe_allow_html=True)
     triggers = st.multiselect("可複選", [
         "久坐", "久站", "走路", "上樓梯", "下樓梯",
@@ -368,6 +372,9 @@ with st.form("intake_form"):
     submit_btn = st.form_submit_button("產生評估報告", use_container_width=True)
 
 
+# ==============================================================
+# 報告
+# ==============================================================
 if submit_btn:
     errors = []
     if gender == "請選擇": errors.append("請選擇生理性別")
@@ -384,15 +391,12 @@ if submit_btn:
         is_acute = "剛發生" in duration
         is_subacute = "一陣子" in duration
         is_chronic = "很久了" in duration
-
         high_irritability = "很容易被激發" in irritability
         mod_irritability = "需要一定活動量" in irritability
         low_irritability = "要比較大的動作" in irritability
-
         spreading_stable = "維持在原來" in spreading
         spreading_expanding = "範圍有擴大" in spreading
         spreading_migrating = "跑來跑去" in spreading
-
         is_young = age in ["18歲以下", "19-30歲", "31-45歲"]
         is_older = age in ["46-60歲", "60歲以上"]
 
@@ -431,18 +435,16 @@ if submit_btn:
         myo = MYOFASCIAL.get(region, MYOFASCIAL["general"])
         lock = LOCKING.get(region, LOCKING["general"])
         rom = ROM_LOSS.get(region, ROM_LOSS["general"])
-
         jt_raw = JOINT_PAIN.get(region, JOINT_PAIN["general"])
-        if is_young:
-            jt = {"causes": jt_raw["young"], "note": jt_raw["note_young"]}
-        else:
-            jt = {"causes": jt_raw["older"], "note": jt_raw["note_older"]}
+        jt = {"causes": jt_raw["young"] if is_young else jt_raw["older"],
+              "note": jt_raw["note_young"] if is_young else jt_raw["note_older"]}
 
-        # =================== 報告 ===================
+        # =================== 報告開始 ===================
         st.markdown("---")
         st.markdown("## 篩檢評估報告")
         st.markdown('<div class="subtitle">Screening Assessment Report</div>', unsafe_allow_html=True)
 
+        # --- Red Flags ---
         if has_red_flags:
             st.markdown(f"""
             <div class="danger-box">
@@ -454,6 +456,7 @@ if submit_btn:
         else:
             st.success("紅旗警訊篩檢：未發現需立即就醫的危險徵兆")
 
+        # --- 摘要 ---
         st.markdown("#### 基本資訊")
         m1, m2, m3 = st.columns(3)
         with m1: st.metric("性別", gender)
@@ -469,6 +472,68 @@ if submit_btn:
             st.write(f"**誘發因子：** {'、'.join(triggers) if triggers else '未選擇'}")
             st.write(f"**緩解因子：** {'、'.join(relievers) if relievers else '未選擇'}")
 
+        # --- 就醫紀錄摘要 ---
+        if has_done_exam:
+            st.markdown("---")
+            st.markdown("#### 就醫與檢查紀錄")
+            exams_done = [e for e in exam_history if e != "尚未就醫或做任何檢查"]
+            st.write(f"**已完成的檢查：** {'、'.join(exams_done)}")
+
+            if exam_result:
+                if "沒什麼大問題" in exam_result:
+                    st.markdown('<div class="acuity-box">檢查結果：結構大致正常</div>', unsafe_allow_html=True)
+                    st.markdown(
+                        "醫生表示結構上沒有明顯異常。這是好消息，代表較嚴重的結構性問題"
+                        "（如骨折、嚴重壓迫等）的可能性較低。\n\n"
+                        "**但這不代表您不會痛。** 許多疼痛來自於：\n"
+                        "- 肌筋膜問題（X 光和 MRI 看不到）\n"
+                        "- 動作控制不良或肌力不足\n"
+                        "- 姿勢性負荷累積\n"
+                        "- 神經敏感化（組織正常但神經系統反應過度）\n\n"
+                        "建議以 **功能性評估**（物理治療師的動作分析）為方向。"
+                    )
+                elif "有發現一些問題" in exam_result:
+                    st.markdown('<div class="acuity-box">檢查結果：已有初步診斷</div>', unsafe_allow_html=True)
+                    if exam_dx_detail:
+                        st.write(f"**醫生提到的方向：** {'、'.join(exam_dx_detail)}")
+                        consistency_notes = []
+
+                        dx_has_disc = any("椎間盤" in d for d in exam_dx_detail)
+                        dx_has_stenosis = any("狹窄" in d for d in exam_dx_detail)
+                        dx_has_nerve = any("神經" in d for d in exam_dx_detail)
+                        dx_has_degeneration = any("退化" in d or "骨刺" in d for d in exam_dx_detail)
+                        dx_has_meniscus = any("半月板" in d for d in exam_dx_detail)
+                        dx_has_muscle = any("肌筋膜" in d or "肌肉" in d for d in exam_dx_detail)
+
+                        if dx_has_disc and disc_pattern:
+                            consistency_notes.append("您的動作模式（彎腰/久坐/咳嗽加劇）與醫生的椎間盤診斷 **方向一致**。建議依椎間盤方向進行物理治療。")
+                        elif dx_has_disc and stenosis_pattern:
+                            consistency_notes.append("醫生診斷為椎間盤問題，但您的動作模式（後仰/久站加劇）更偏向椎孔狹窄方向。建議與醫師討論。")
+
+                        if dx_has_stenosis and stenosis_pattern:
+                            consistency_notes.append("您的動作模式（後仰/久站加劇）與醫生的狹窄診斷 **方向一致**。")
+                        elif dx_has_stenosis and disc_pattern:
+                            consistency_notes.append("醫生診斷為狹窄，但您的動作模式更偏向椎間盤方向。建議進一步討論。")
+
+                        if dx_has_degeneration and is_young:
+                            consistency_notes.append("醫生提到退化性變化。在您的年齡層，影像上的輕微退化 **非常常見且多數無症狀**，不一定是疼痛原因，建議著重功能性改善。")
+
+                        if dx_has_meniscus and has_locking:
+                            consistency_notes.append("醫生提到半月板問題，合併您的卡住感，兩者 **方向一致**。")
+                        if dx_has_nerve and has_any_nerve:
+                            consistency_notes.append("醫生提到神經問題，合併您的神經性疼痛特徵，兩者 **方向一致**。")
+                        if dx_has_muscle and has_muscle:
+                            consistency_notes.append("醫生提到肌肉問題，合併您的肌肉性疼痛特徵，兩者 **方向一致**。肌筋膜問題通常對物理治療反應良好。")
+
+                        if consistency_notes:
+                            st.markdown("\n**本次篩檢與過去檢查比對：**")
+                            for cn in consistency_notes:
+                                st.markdown(f"- {cn}")
+                        st.write("")
+                elif "還在等" in exam_result:
+                    st.markdown('<div class="acuity-box">檢查結果：待確認</div>', unsafe_allow_html=True)
+                    st.markdown("報告尚未出來，建議回診時向醫師確認，並可攜帶本篩檢報告供參考。")
+
         # === 病程與疼痛行為 ===
         st.markdown("---")
         st.markdown("#### 病程與疼痛行為分析")
@@ -479,141 +544,71 @@ if submit_btn:
                 "您的症狀屬於 **急性期**，組織可能正處於發炎與修復的初始階段。\n\n"
                 "**急性疼痛的臨床特徵（Magee）：**\n"
                 "- 疼痛通常較為嚴重、連續、甚至可能造成失能\n"
-                "- 疼痛程度和持續時間嚴重到需要尋求協助\n"
                 "- 動作發生前或僅少許活動就會產生症狀\n"
-                "- 疼痛通常在動作停止後仍會持續一段時間\n"
+                "- 疼痛在動作停止後仍會持續一段時間\n"
                 "- 常伴隨焦慮感\n\n"
-                "**處理原則：**\n"
-                "- 此階段以 **保護、減少發炎、控制疼痛** 為優先\n"
-                "- 避免反覆測試或刺激疼痛動作\n"
-                "- 相對休息（不是完全不動），避免加劇因子\n"
-                "- 可考慮冰敷（急性發炎期）"
+                "**處理原則：** 保護、減少發炎、控制疼痛為優先。相對休息，避免加劇因子。"
             )
         elif is_subacute:
             phase_label = "亞急性期（Subacute）— 2 週至 3 個月"
             phase_detail = (
                 "您的症狀屬於 **亞急性期**，組織正處於修復與重塑的過渡階段。\n\n"
-                "**亞急性期的臨床特徵：**\n"
-                "- 疼痛程度通常已比急性期減輕\n"
-                "- 開始能區分哪些動作會加劇、哪些不會\n"
-                "- 組織正在癒合，但尚未完全恢復強度\n\n"
-                "**處理原則：**\n"
-                "- 此階段適合 **漸進式恢復活動**\n"
-                "- 開始進行不會加劇疼痛的動作訓練\n"
-                "- 注意不要過度保護（避免廢用性萎縮）\n"
-                "- 如果症狀沒有逐漸改善，應重新評估診斷"
+                "**處理原則：** 漸進式恢復活動，避免過度保護。若症狀沒有逐漸改善，應重新評估。"
             )
         else:
             phase_label = "慢性期（Chronic）— 超過 3 個月"
             phase_detail = (
                 "您的症狀屬於 **慢性期**，已超過一般組織修復的預期時間。\n\n"
                 "**慢性疼痛的臨床特徵（Magee）：**\n"
-                "- 疼痛是加劇性的（aggravating），但程度通常較急性期不強烈\n"
-                "- 患者通常已經歷過這種疼痛，可能發展出自己的應對方式\n"
-                "- 慢性疼痛常與 **憂鬱** 情緒有關（相對於急性期的焦慮）\n"
-                "- 需要考慮疼痛是否已超越組織損傷本身，涉及 **中樞敏感化**\n\n"
-                "**處理原則：**\n"
-                "- 此階段需要 **全面性的評估與處理**\n"
-                "- 除了物理層面，也需關注心理、睡眠、活動量等因素\n"
-                "- 漸進式增加負荷與活動，建立信心\n"
-                "- 過度依賴影像或反覆檢查可能增加焦慮，不一定有幫助"
+                "- 疼痛是加劇性的，但程度通常較急性期不強烈\n"
+                "- 患者可能已發展出自己的應對方式\n"
+                "- 慢性疼痛常與憂鬱情緒有關\n"
+                "- 需考慮中樞敏感化的可能\n\n"
+                "**處理原則：** 全面性評估，關注心理、睡眠、活動量。漸進式增加負荷。"
             )
-
         st.markdown(f'<div class="acuity-box">{phase_label}</div>', unsafe_allow_html=True)
         st.markdown(phase_detail)
         st.write("")
 
         if high_irritability:
-            irr_label = "高刺激性（High Irritability）"
-            irr_detail = (
-                "您的疼痛 **非常容易被激發**，輕微動作甚至還沒動就開始痛，且消退很慢。\n\n"
-                "**臨床意義：**\n"
-                "- 組織處於高度敏感狀態，可能仍有明顯的發炎反應\n"
-                "- 或者神經系統對刺激的反應已經放大（周邊或中樞敏感化）\n\n"
-                "**處理原則：**\n"
-                "- 評估和治療時需要非常 **謹慎**，避免過度刺激\n"
-                "- 活動量應從非常低的起點開始，緩慢漸進\n"
-                "- 每次只改變一個變因，觀察反應"
-            )
+            irr_detail = "您的疼痛 **非常容易被激發**。組織處於高度敏感狀態。評估和治療需謹慎，活動量從低起點開始。"
             if is_chronic:
-                irr_detail += (
-                    "\n\n**注意：** 您同時處於慢性期且高刺激性。這種組合較不尋常——"
-                    "慢性期疼痛通常已不那麼容易被激發。若仍然高度敏感，需考慮：\n"
-                    "- 是否有未被發現的結構問題\n"
-                    "- 是否已發展為中樞敏感化\n"
-                    "- 建議尋求專科醫師或疼痛科評估"
-                )
+                irr_detail += "\n\n慢性期 + 高刺激性較不尋常，需考慮未發現的結構問題或中樞敏感化。"
+            st.markdown(f'<div class="acuity-box">高刺激性（High Irritability）</div>', unsafe_allow_html=True)
+            st.markdown(irr_detail); st.write("")
         elif mod_irritability:
-            irr_label = "中度刺激性（Moderate Irritability）"
-            irr_detail = (
-                "您的疼痛需要 **一定程度的活動量** 才會被誘發，休息後能改善。\n\n"
-                "**臨床意義：**\n"
-                "- 組織有一定的承受能力，但超過負荷閾值就會產生症狀\n"
-                "- 這是最常見的臨床表現\n\n"
-                "**處理原則：**\n"
-                "- 找出「剛好不會引發疼痛」的活動量作為基準線\n"
-                "- 在基準線上漸進式增加負荷\n"
-                "- 可以進行適度的檢查與治療"
-            )
+            st.markdown(f'<div class="acuity-box">中度刺激性（Moderate Irritability）</div>', unsafe_allow_html=True)
+            st.markdown("需要一定活動量才會被誘發，休息後能改善。找出基準線，漸進增加負荷。"); st.write("")
         else:
-            irr_label = "低刺激性（Low Irritability）"
-            irr_detail = (
-                "您的疼痛只有在 **較大的動作或特定動作** 時才會出現。\n\n"
-                "**臨床意義：**\n"
-                "- 組織的承受能力相對良好\n"
-                "- 可以進行較完整的動作測試和評估\n\n"
-                "**處理原則：**\n"
-                "- 可以較積極地進行活動和訓練\n"
-                "- 針對誘發疼痛的特定動作進行分析和改善\n"
-                "- 適合進行較完整的理學檢查"
-            )
-
-        st.markdown(f'<div class="acuity-box">{irr_label}</div>', unsafe_allow_html=True)
-        st.markdown(irr_detail)
-        st.write("")
+            st.markdown(f'<div class="acuity-box">低刺激性（Low Irritability）</div>', unsafe_allow_html=True)
+            st.markdown("只有較大動作才會痛。可較積極進行活動和訓練。"); st.write("")
 
         if spreading_expanding:
-            st.markdown('<div class="nerve-box">症狀範圍擴大（Expanding / Radiating）</div>', unsafe_allow_html=True)
-            d = "您的疼痛範圍有 **擴大或延伸** 的趨勢。\n\n**臨床意義：**\n- 疼痛範圍擴大可能代表問題在惡化\n"
-            if has_any_nerve:
-                d += "- 合併神經性疼痛特徵，擴散若沿固定路徑，高度提示 **神經根壓迫加重**\n"
-            if spine:
-                d += "- 在脊椎問題中，疼痛向遠端延伸通常被視為不理想的進展方向\n"
-            d += "\n**建議：** 疼痛範圍持續擴大應優先就醫。"
-            st.markdown(d)
-            st.write("")
+            st.markdown('<div class="nerve-box">症狀範圍擴大</div>', unsafe_allow_html=True)
+            d = "疼痛範圍有擴大或延伸趨勢，可能代表問題在惡化。"
+            if has_any_nerve: d += " 合併神經性疼痛，若沿固定路徑擴散，提示神經根壓迫加重。"
+            d += "\n\n**建議：** 疼痛範圍持續擴大應優先就醫。"
+            st.markdown(d); st.write("")
         elif spreading_migrating:
-            st.markdown('<div class="sympathetic-box">症狀位置游移（Migrating）</div>', unsafe_allow_html=True)
-            d = "您的疼痛位置 **會跑來跑去**，沒有固定。\n\n**臨床意義：**\n- 多個部位同時有問題\n- 牽連痛（referred pain）\n- 中樞敏感化\n"
-            if is_chronic: d += "- 慢性期合併游移性疼痛，中樞敏感化可能性較高\n"
-            if has_sympathetic: d += "- 合併交感神經性疼痛特徵，需注意複雜性疼痛機制\n"
-            d += "\n**建議：** 建議完整評估。"
-            st.markdown(d)
-            st.write("")
+            st.markdown('<div class="sympathetic-box">症狀位置游移</div>', unsafe_allow_html=True)
+            d = "疼痛位置不固定，可能涉及多部位問題、牽連痛或中樞敏感化。"
+            if is_chronic: d += " 慢性期合併游移性疼痛，中樞敏感化可能性較高。"
+            st.markdown(d); st.write("")
 
         if is_acute and high_irritability and (rest_pain or move_pain):
-            st.markdown(
-                "**病程整合提示：** 急性期 + 高刺激性 + 動靜皆痛 → "
-                "組織正處於高度發炎或損傷狀態，目前 **不適合積極的動作測試或運動介入**。"
-            )
+            st.markdown("**病程整合提示：** 急性 + 高刺激 + 動靜皆痛 → 不適合積極介入，以保護為主。")
             st.write("")
         if is_chronic and low_irritability:
-            st.markdown(
-                "**病程整合提示：** 慢性期 + 低刺激性 → "
-                "適合 **較積極的功能性訓練與回歸日常活動**，重點在漸進式增加負荷。"
-            )
+            st.markdown("**病程整合提示：** 慢性 + 低刺激 → 適合較積極的功能性訓練。")
             st.write("")
         if is_chronic and "沒有任何改善" in relievers:
-            st.markdown(
-                "**病程整合提示：** 慢性期 + 任何方式皆無法改善 → "
-                "需考慮 **中樞敏感化、心理社會因素**，建議多面向評估。"
-            )
+            st.markdown("**病程整合提示：** 慢性 + 無法改善 → 需考慮中樞敏感化、心理社會因素。")
             st.write("")
 
         # === 疼痛性質 → 組織來源 ===
         st.markdown("---")
         st.markdown("#### ⭐ 疼痛性質 → 組織來源分析")
-        st.caption("依據 Magee's Orthopedic Physical Assessment 疼痛性質與組織來源對照")
+        st.caption("依據 Magee's Orthopedic Physical Assessment")
 
         if pain_quality and tissue_priority:
             chips_html = ""
@@ -633,122 +628,70 @@ if submit_btn:
                 label = TISSUE_LABELS[tissue]
                 box_cls = TISSUE_BOX[tissue]
                 desc_str = "、".join(descriptors)
-
                 st.markdown(f'<div class="{box_cls}">{label}</div>', unsafe_allow_html=True)
 
                 if tissue == "fracture":
-                    d = (
-                        f"疼痛描述「{desc_str}」提示可能涉及 **骨折**。\n\n"
-                        "- 尖銳且無法忍受的劇痛，尤其在外傷後出現，需高度警覺\n"
-                    )
-                    if is_acute: d += "- 處於急性期，若有明確外傷史，骨折可能性更高\n"
+                    d = f"疼痛描述「{desc_str}」提示可能涉及 **骨折**。\n"
+                    if is_acute: d += "- 急性期若有外傷史，骨折可能性更高\n"
                     d += "\n**建議：** 立即安排 X 光。"
-
                 elif tissue == "vascular":
-                    d = (
-                        f"疼痛描述「{desc_str}」提示可能涉及 **血管性** 問題。\n\n"
-                        "- 抽痛（搏動性）或擴散不清，可能與血管充血或循環障礙有關\n"
-                        "- 需排除：深層靜脈血栓（DVT）、動脈供血不足\n\n"
-                        "**建議：** 合併患肢腫脹或膚色改變，儘速就醫。"
-                    )
-
+                    d = f"疼痛描述「{desc_str}」提示可能涉及 **血管性** 問題。\n- 需排除 DVT、動脈供血不足\n\n**建議：** 合併腫脹或膚色改變，儘速就醫。"
                 elif tissue == "nerve_root":
                     d = f"疼痛描述「{desc_str}」提示可能涉及 **神經根** 問題。\n\n"
                     if spine:
                         if disc_pattern and not stenosis_pattern:
                             d += "結合動作模式（彎腰/久坐/咳嗽加劇），**高度指向椎間盤突出壓迫神經根**。\n"
-                            if region == "lumbar": d += "- 典型放射：腰→臀→大腿後→小腿→足部\n"
-                            else: d += "- 典型放射：頸→肩→上臂→前臂→手指\n"
+                            d += ("- 典型放射：腰→臀→大腿後→小腿→足部\n" if region == "lumbar" else "- 典型放射：頸→肩→上臂→前臂→手指\n")
                         elif stenosis_pattern and not disc_pattern:
                             d += "結合動作模式（後仰/久站加劇），**指向椎間孔狹窄壓迫神經根**。\n"
                         elif mixed_spine:
                             d += "彎曲與伸直都加劇，可能同時有椎間盤與椎孔問題。\n"
                         else:
-                            d += "目前尚無明確動作模式區分方向。彎腰加劇→椎間盤；後仰加劇→椎孔狹窄。\n"
+                            d += "目前尚無明確動作模式區分方向。\n"
                     elif upper:
-                        d += "發生在上肢，需鑑別頸椎神經根壓迫 vs 周邊神經卡壓。\n"
-                        if region == "wrist_hand": d += "- 腕隧道、肘隧道、頸椎 C6-C8 皆需考慮\n"
+                        d += "發生在上肢，需鑑別頸椎來源 vs 周邊神經卡壓。\n"
                     elif lower:
                         d += "發生在下肢，需排除腰椎神經根壓迫。\n"
-                        if disc_pattern: d += "合併彎腰/久坐加劇，腰椎椎間盤來源可能性上升。\n"
                     if has_weakness: d += "\n合併無力，壓迫程度可能較嚴重。\n"
-                    if spreading_expanding: d += "\n合併症狀範圍擴大，神經壓迫可能正在惡化。\n"
+                    if spreading_expanding: d += "\n合併範圍擴大，壓迫可能惡化。\n"
                     d += "\n**建議：** 安排 MRI 與神經學評估。"
-
                 elif tissue == "nerve":
-                    d = (
-                        f"疼痛描述「{desc_str}」提示可能涉及 **周邊神經** 問題。\n\n"
-                        "- 閃電般瞬間劇痛是神經幹受刺激的典型表現\n"
-                    )
-                    if region == "wrist_hand": d += "- 常見：腕隧道（正中神經）、肘隧道（尺神經）\n"
-                    elif lower: d += "- 常見：坐骨神經、腓神經、跗管症候群\n"
+                    d = f"疼痛描述「{desc_str}」提示 **周邊神經** 問題。閃電般瞬間劇痛是神經幹受刺激的典型表現。\n"
+                    if region == "wrist_hand": d += "- 常見：腕隧道、肘隧道\n"
+                    elif lower: d += "- 常見：坐骨神經、腓神經\n"
                     d += "\n**建議：** 紀錄觸電感的位置與延伸方向。"
-
                 elif tissue == "sympathetic":
-                    d = (
-                        f"疼痛描述「{desc_str}」提示可能涉及 **交感神經 / 神經病變性** 疼痛。\n\n"
-                        "- 灼熱、壓力感、針蟄感的組合暗示自主神經系統異常參與\n"
-                        "- 考慮：CRPS、周邊神經病變、帶狀疱疹後神經痛\n"
-                    )
-                    if is_chronic: d += "\n慢性期出現交感神經性特徵，需注意中樞敏感化。\n"
+                    d = f"疼痛描述「{desc_str}」提示 **交感神經 / 神經病變性** 疼痛。需考慮 CRPS、周邊神經病變。\n"
+                    if is_chronic: d += "\n慢性期出現此特徵，需注意中樞敏感化。\n"
                     d += "\n**建議：** 此類疼痛需疼痛科或神經科評估。"
-
                 elif tissue == "bone":
-                    d = f"疼痛描述「{desc_str}」提示可能涉及 **骨骼** 層面的問題。\n\n"
-                    if is_young:
-                        d += (
-                            "- 年輕族群需考慮：壓力性骨折（疲勞性骨折，好發於運動量突然增加時）、"
-                            "骨骼生長相關問題\n"
-                            "- 退化性問題在此年齡層較不常見\n"
-                        )
-                    else:
-                        d += "- 需考慮：壓力性骨折、骨內壓力變化、骨質疏鬆相關問題\n"
-                    if "影響睡眠" in impacts: d += "- 夜間深部骨骼痛需排除較嚴重的病理\n"
-                    d += "\n**建議：** 持續且負重加劇的深部痛，建議安排 X 光。"
-
+                    d = f"疼痛描述「{desc_str}」提示可能涉及 **骨骼** 問題。\n"
+                    if is_young: d += "- 年輕族群考慮壓力性骨折（運動量突然增加）\n"
+                    else: d += "- 需考慮壓力性骨折、骨質疏鬆\n"
+                    if "影響睡眠" in impacts: d += "- 夜間骨骼痛需排除嚴重病理\n"
+                    d += "\n**建議：** 持續且負重加劇，安排 X 光。"
                 elif tissue == "ligament":
-                    d = f"疼痛描述「{desc_str}」提示可能涉及 **韌帶或關節囊** 層面的問題。\n\n"
-                    d += f"- **{pain_location} 可能相關：** {jt['causes']}\n"
-                    d += f"- **臨床提示：** {jt['note']}\n"
-                    if has_locking: d += "\n合併卡住感，更需注意關節內部結構的問題。"
-                    if is_young:
-                        d += (
-                            "\n\n您的年齡層較少出現退化性問題。韌帶 / 關節囊的不適"
-                            "通常與使用方式、姿勢習慣或過去的受傷有關，"
-                            "透過適當的訓練和調整通常能有效改善。"
-                        )
-                    elif is_older:
-                        if is_chronic and "走路 / 活動後改善" in relievers:
-                            d += "\n\n慢性期 + 活動後改善 → 退化性關節問題的「晨僵」模式值得注意。"
-                    d += "\n\n**建議：** 避免反覆刺激不適部位，適度活動有助於關節健康。"
-
+                    d = f"疼痛描述「{desc_str}」提示可能涉及 **韌帶或關節囊**。\n\n"
+                    d += f"- {pain_location} 可能相關：{jt['causes']}\n- {jt['note']}\n"
+                    if has_locking: d += "\n合併卡住感，需注意關節內結構。"
+                    if is_young: d += "\n\n您的年齡層較少退化性問題，通常與使用方式或過去受傷有關，透過訓練和調整通常能改善。"
+                    elif is_older and is_chronic and "走路 / 活動後改善" in relievers:
+                        d += "\n\n慢性期 + 活動後改善 → 退化性關節問題的晨僵模式值得注意。"
+                    d += "\n\n**建議：** 避免反覆刺激，適度活動有助關節健康。"
                 elif tissue == "muscle":
-                    d = (
-                        f"疼痛描述「{desc_str}」提示可能涉及 **肌肉** 來源。\n\n"
-                        f"- **{pain_location} 常見肌群：** {myo['muscles']}\n"
-                        f"- **好發情境：** {myo['common']}\n"
-                    )
+                    d = f"疼痛描述「{desc_str}」提示 **肌肉** 來源。\n\n- 常見肌群：{myo['muscles']}\n- 好發情境：{myo['common']}\n"
                     if "按壓痛" in descriptors:
-                        d += (
-                            "\n**關於引痛點（Trigger Point）：**\n"
-                            "您有明確的按壓痛，這可能代表存在肌筋膜引痛點。"
-                            "引痛點是指局部組織有過度刺激（hyperirritability），"
-                            "在該處施壓會感到酸痛。引痛點處常伴有組織緊繃，"
-                            "可觸摸到帶狀的肌肉收縮硬塊。"
-                            "當敏感度增加到足夠大時，可產生穩定的、深層的、"
-                            "酸酸的牽連痛（referred pain）。\n\n"
-                            "- 正常肌肉不會有引痛點\n"
-                            "- 找出引痛點有助於診斷\n"
-                            "- 施壓引痛點時可能重現（reproduce）您的症狀\n"
-                        )
-                    if is_acute: d += "\n急性期肌肉損傷以保護、消炎為主，避免過度伸展或按壓。"
+                        d += ("\n**關於引痛點（Trigger Point）：**\n"
+                              "您有明確的按壓痛，可能存在肌筋膜引痛點——局部組織過度刺激，"
+                              "施壓會感到酸痛，常伴有帶狀緊繃硬塊。"
+                              "敏感度夠大時可產生深層的牽連痛（referred pain）。"
+                              "正常肌肉不會有引痛點，找出引痛點有助於診斷。\n")
+                    if is_acute: d += "\n急性期以保護、消炎為主。"
                     elif is_chronic: d += "\n慢性肌肉疼痛通常對物理治療反應良好。"
                     d += f"\n\n**自我照護：** {myo['self_care']}"
                 else:
                     d = ""
-
-                if d:
-                    st.markdown(d); st.write("")
+                if d: st.markdown(d); st.write("")
 
             if len(tissue_priority) >= 3:
                 st.markdown("**提示：** 涉及多種組織來源，建議由專業人員鑑別。")
@@ -763,40 +706,27 @@ if submit_btn:
 
         st.markdown("##### A. 伴隨症狀分析")
         sym_notes = []
-
         if has_weakness and has_any_nerve:
             d = "伴隨無力且疼痛具神經特徵，神經壓迫可能已影響運動神經。\n\n"
-            if spine and disc_pattern: d += "結合屈曲誘發 → 椎間盤壓迫神經根可能性高。\n"
+            if spine and disc_pattern: d += "結合屈曲誘發 → 椎間盤壓迫可能性高。\n"
             elif spine and stenosis_pattern: d += "結合伸直誘發 → 椎孔狹窄壓迫可能性高。\n"
             if is_acute: d += "\n急性期合併無力更需積極處理。"
             d += "\n\n**建議：** 優先安排影像與神經學檢查。"
             sym_notes.append(("nerve-box", "神經壓迫合併肌力下降", d))
         elif has_weakness:
             d = "有無力感但疼痛性質未偏向神經。可能：疼痛抑制、廢用萎縮、肌腱損傷。"
-            if is_chronic: d += "\n慢性期無力可能與長時間不活動導致的肌力流失有關。"
+            if is_chronic: d += "\n慢性期無力可能與長時間不活動有關。"
             sym_notes.append(("nerve-box", "肌力下降徵兆", d))
-
         if has_locking and has_rom_loss:
-            extra = ""
-            if has_ligament: extra = "\n合併韌帶/關節囊疼痛，更支持關節結構問題。"
+            extra = "\n合併韌帶/關節囊疼痛，更支持關節結構問題。" if has_ligament else ""
             sym_notes.append(("joint-box", "關節內部障礙模式",
-                f"同時有卡住感與角度受限。\n\n"
-                f"- {pain_location} 常見：{lock['causes']}\n"
-                f"- 典型表現：{lock['example']}\n"
-                f"- 注意事項：{lock['note']}{extra}"
-            ))
+                f"同時有卡住感與角度受限。\n\n- {pain_location} 常見：{lock['causes']}\n- 典型：{lock['example']}\n- {lock['note']}{extra}"))
         elif has_locking:
-            sym_notes.append(("joint-box", "關節卡鎖徵兆",
-                f"有卡住或彈響感。\n\n- {pain_location} 常見：{lock['causes']}\n- {lock['example']}\n- {lock['note']}"
-            ))
+            sym_notes.append(("joint-box", "關節卡鎖徵兆", f"有卡住或彈響感。\n\n- {pain_location} 常見：{lock['causes']}\n- {lock['example']}\n- {lock['note']}"))
         elif has_rom_loss:
-            extra = ""
-            if has_muscle: extra = "\n合併肌肉性疼痛，保護性痙攣可能性較高。"
+            extra = "\n合併肌肉性疼痛，保護性痙攣可能性較高。" if has_muscle else ""
             if is_acute: extra += "\n急性期的活動受限通常是保護性的。"
-            sym_notes.append(("joint-box", "活動度受限",
-                f"角度上不去或受限。\n\n- {pain_location} 常見：{rom['causes']}\n- {rom['note']}{extra}"
-            ))
-
+            sym_notes.append(("joint-box", "活動度受限", f"角度上不去或受限。\n\n- {pain_location} 常見：{rom['causes']}\n- {rom['note']}{extra}"))
         if sym_notes:
             for b, t, d in sym_notes:
                 st.markdown(f'<div class="{b}">{t}</div>', unsafe_allow_html=True); st.markdown(d); st.write("")
@@ -805,74 +735,47 @@ if submit_btn:
 
         st.markdown("##### B. 動作模式分析")
         mv_notes = []
-
         if rest_pain or move_pain:
             d = "動靜皆痛，典型急性發炎期。以保護、消炎為優先。"
             if "冰敷" in relievers: d += "\n\n冰敷有效，支持急性發炎。"
             if is_acute: d += "\n\n處於急性期，此反應屬預期中。"
-            elif is_chronic: d += "\n\n但已處於慢性期，動靜皆痛持續超過 3 個月較不尋常，需考慮是否有未發現的問題或中樞敏感化。"
-            if high_irritability: d += "\n合併高刺激性，目前不適合積極介入。"
+            elif is_chronic: d += "\n\n但已慢性期，動靜皆痛持續超過 3 個月較不尋常。"
+            if high_irritability: d += "\n合併高刺激性，不適合積極介入。"
             mv_notes.append(("inflam-box", "急性發炎期", d))
-
         if spine:
             if disc_pattern and not stenosis_pattern:
                 agg = [t for t in ["久坐", "彎腰", "打噴嚏 / 咳嗽"] if t in triggers]
-                d = (
-                    f"誘發因子：{'、'.join(agg)}\n\n"
-                    "**屈曲負荷加劇 — 椎間盤方向（Discogenic Pattern）**\n\n"
-                    "前彎、久坐、咳嗽加劇 → 椎間盤源性問題：\n"
-                    "- 前彎/坐姿增加椎間盤後方壓力\n"
-                    "- 咳嗽/打噴嚏瞬間增加腹內壓\n\n"
-                    "**建議：** 使用腰靠、每 30 分鐘起身、避免彎腰搬重物。"
-                )
+                d = f"誘發因子：{'、'.join(agg)}\n\n**屈曲負荷加劇 — 椎間盤方向**\n\n前彎、久坐、咳嗽加劇 → 椎間盤源性問題。\n\n**建議：** 使用腰靠、每 30 分鐘起身、避免彎腰搬重物。"
                 if "走路 / 活動後改善" in relievers: d += "\n\n走路緩解更支持椎間盤方向。"
                 if has_nerve_root: d += "\n合併神經根痛，壓迫可能性上升。"
-                if is_acute: d += "\n\n急性期椎間盤問題，前 2 週以保護為主。"
-                elif is_chronic: d += "\n\n慢性期椎間盤問題，需評估核心穩定性與動作控制。"
+                if is_acute: d += "\n\n急性期以保護為主。"
+                elif is_chronic: d += "\n\n慢性期需評估核心穩定性。"
                 mv_notes.append(("pattern-box", "屈曲負荷型 — 椎間盤方向", d))
-
             elif stenosis_pattern and not disc_pattern:
                 agg = [t for t in ["後仰 / 挺身", "久站"] if t in triggers]
-                d = (
-                    f"誘發因子：{'、'.join(agg)}\n\n"
-                    "**伸直負荷加劇 — 椎孔狹窄方向（Stenosis / Facet Pattern）**\n\n"
-                    "後仰/久站加劇 → 椎間孔狹窄或小面關節問題：\n"
-                    "- 後仰時椎間孔縮小\n"
-                )
-                if region == "lumbar": d += "- 走路漸漸麻痛需坐下前彎休息 → 神經性間歇性跛行\n"
-                d += "\n**建議：** 避免久站或後仰，前彎/坐下通常能緩解。"
-                if is_older: d += "\n中老年退化性問題常見，建議影像檢查。"
+                d = f"誘發因子：{'、'.join(agg)}\n\n**伸直負荷加劇 — 椎孔狹窄方向**\n\n後仰/久站加劇 → 椎間孔狹窄或小面關節問題。\n\n**建議：** 避免久站或後仰，前彎/坐下通常能緩解。"
+                if is_older: d += "\n中老年退化性問題常見。"
                 if has_nerve_root: d += "\n合併神經根痛，椎孔狹窄可能性上升。"
                 mv_notes.append(("pattern-box", "伸直負荷型 — 椎孔狹窄方向", d))
-
             elif mixed_spine:
-                d = "彎曲與伸直都加劇。可能多重問題或急性發炎期。"
-                if is_acute: d += "\n急性期任何方向都可能刺激組織。"
-                d += "\n\n**建議：** 脊椎中立，儘速影像檢查。"
+                d = "彎曲與伸直都加劇，可能多重問題或急性發炎期。\n\n**建議：** 脊椎中立，儘速影像檢查。"
                 mv_notes.append(("inflam-box", "混合型脊椎負荷模式", d))
         else:
             if "彎腰" in triggers and region == "hip":
-                mv_notes.append(("pattern-box", "髖關節屈曲受限模式",
-                    "彎腰時髖部痛：FAI、關節唇損傷、需排除腰椎轉移。"))
+                mv_notes.append(("pattern-box", "髖關節屈曲受限模式", "彎腰時髖部痛：FAI、關節唇損傷、需排除腰椎轉移。"))
             if "久坐" in triggers and not spine:
                 d = f"久坐加劇 {pain_location} 的不適。\n- {myo['common']}\n\n**建議：** 每 30 分鐘起身。{myo['self_care']}"
-                if is_chronic: d += "\n慢性久坐相關疼痛通常反映姿勢與肌力問題。"
                 mv_notes.append(("muscle-box", "久坐相關不適", d))
-
         stairs = [t for t in triggers if t in ["上樓梯", "下樓梯"]]
         if stairs:
             d = f"誘發因子：{'、'.join(stairs)}\n\n"
-            if "下樓梯" in stairs and "上樓梯" not in stairs:
-                d += "下樓梯（離心）較痛：PFPS、髕骨肌腱炎。"
-            elif "上樓梯" in stairs and "下樓梯" not in stairs:
-                d += "上樓梯（向心）較痛：股四頭肌不足、髕骨軌跡異常。"
-            else:
-                d += "上下樓梯皆痛，承重能力明顯下降。"
+            if "下樓梯" in stairs and "上樓梯" not in stairs: d += "下樓梯（離心）較痛：PFPS、髕骨肌腱炎。"
+            elif "上樓梯" in stairs and "下樓梯" not in stairs: d += "上樓梯（向心）較痛：股四頭肌不足、髕骨軌跡異常。"
+            else: d += "上下樓梯皆痛，承重能力明顯下降。"
             if has_locking: d += f"\n合併卡住感：{lock['note']}"
             if has_bone: d += "\n合併骨骼性疼痛，注意壓力性骨折。"
             d += "\n\n**建議：** 減少樓梯，從低負荷訓練開始。"
             mv_notes.append(("pattern-box", "承重模式異常", d))
-
         if "手舉高" in triggers:
             d = "手舉過頭痛。"
             if region == "shoulder":
@@ -880,22 +783,17 @@ if submit_btn:
                 if has_weakness: d += "\n合併無力，注意旋轉肌群撕裂。"
             d += "\n\n**建議：** 暫避過肩動作，先肩胛穩定訓練。"
             mv_notes.append(("pattern-box", "上舉受限", d))
-
         if "轉身 / 轉彎" in triggers:
             d = "轉身時痛。"
             if spine: d += "\n脊椎旋轉：小面關節壓力、椎間盤剪力、核心控制不佳。\n\n**建議：** 整個身體一起轉，核心抗旋轉訓練。"
             mv_notes.append(("pattern-box", "旋轉不耐受", d))
-
         if "走路" in triggers:
             d = "走路引發疼痛。\n\n"
-            wk = {"ankle": "足底筋膜炎、跟腱炎、踝不穩定", "knee": "軟骨磨損、承重異常",
-                   "lumbar": "區分椎間盤（走路改善）vs 椎管狹窄（走路加劇）", "hip": "髖退化、臀中肌無力"}
+            wk = {"ankle": "足底筋膜炎、跟腱炎、踝不穩定", "knee": "軟骨磨損、承重異常", "lumbar": "區分椎間盤（走路改善）vs 椎管狹窄（走路加劇）", "hip": "髖退化、臀中肌無力"}
             d += f"- {wk.get(region, '進一步評估')}\n"
-            if spine and has_nerve_root and stenosis_pattern:
-                d += "\n走路加劇 + 神經根痛 + 後仰加劇 → **神經性間歇性跛行**。"
+            if spine and has_nerve_root and stenosis_pattern: d += "\n走路加劇 + 神經根痛 + 後仰加劇 → **神經性間歇性跛行**。"
             if has_vascular: d += "\n合併血管性疼痛，需鑑別血管性 vs 神經性跛行。"
             mv_notes.append(("pattern-box", "步行疼痛", d))
-
         if mv_notes:
             for b, t, d in mv_notes:
                 st.markdown(f'<div class="{b}">{t}</div>', unsafe_allow_html=True); st.markdown(d); st.write("")
@@ -917,7 +815,7 @@ if submit_btn:
             n = "**活動後緩解：**"
             if spine and disc_pattern: n += " 椎間盤模式中走路緩解是典型特徵。"
             elif "久坐" in triggers: n += " 越不動越痛模式。"
-            if is_chronic and has_ligament: n += f" 慢性期 + 韌帶痛 + 活動改善 → {jt['note']}"
+            if is_chronic and has_ligament: n += f" {jt['note']}"
             rel.append(n)
         if "改變姿勢" in relievers:
             rel.append("**改變姿勢有效：** 疼痛與特定姿勢高度相關。")
@@ -931,7 +829,6 @@ if submit_btn:
             if is_chronic: n += " 慢性期合併無法改善，強烈建議多面向評估。"
             n += " **強烈建議專業評估。**"
             rel.append(n)
-
         if rel:
             for r in rel: st.markdown(f"- {r}")
             st.write("")
@@ -951,36 +848,119 @@ if submit_btn:
                 st.markdown(n)
             if "需藥物止痛" in impacts:
                 n = "- **需藥物控制：** 建議搭配物理治療。"
-                if is_chronic: n += " 長期用藥需評估是否產生依賴或掩蓋問題。"
+                if is_chronic: n += " 長期用藥需評估是否產生依賴。"
                 st.markdown(n)
             if "影響日常" in impacts:
                 st.markdown("- **日常功能受限：** 建議積極治療。")
 
+        # === 綜合建議 ===
         st.markdown("---")
         st.markdown("#### 綜合建議")
 
-        if has_red_flags:
-            st.error("**立即就醫** — 您有紅旗警訊。")
-        elif has_fracture:
-            st.error("**建議儘速就醫** — 疼痛性質提示骨折可能。")
-        elif has_vascular:
-            st.warning("**建議就醫** — 疼痛性質提示血管問題。")
-        elif vas_score >= 7:
-            st.warning("**建議就醫** — 疼痛指數偏高。")
-        elif is_acute and high_irritability:
-            st.warning("**建議就醫或密切觀察** — 急性期且高刺激性，建議由專業人員評估。")
-        elif is_chronic and "沒有任何改善" in relievers:
-            st.warning("**建議多面向評估** — 慢性期且無法改善，需考慮疼痛科、心理、睡眠等因素。")
-        elif vas_score >= 4:
-            if is_chronic:
-                st.info("**建議追蹤** — 中度慢性疼痛。重點在漸進式恢復功能，而非過度保護。")
+        # --- 1. 問題方向研判 ---
+        primary_sources = []
+        secondary_sources = []
+
+        if spine and disc_pattern and has_nerve_root:
+            primary_sources.append("椎間盤突出合併神經根壓迫")
+        elif spine and disc_pattern:
+            primary_sources.append("椎間盤源性問題")
+        if spine and stenosis_pattern and has_nerve_root:
+            primary_sources.append("椎間孔狹窄合併神經根壓迫")
+        elif spine and stenosis_pattern:
+            primary_sources.append("椎間孔狹窄 / 小面關節問題")
+
+        if has_fracture: primary_sources.insert(0, "骨折")
+        if has_vascular: primary_sources.insert(0, "血管性問題")
+        if has_nerve_root and not spine:
+            primary_sources.append("神經根壓迫（需釐清來源）")
+        if has_nerve:
+            secondary_sources.append("周邊神經卡壓（如腕隧道 / 肘隧道）" if region == "wrist_hand" else "周邊神經卡壓")
+        if has_sympathetic:
+            secondary_sources.append("交感神經 / 神經病變性疼痛")
+        if has_bone and "骨折" not in primary_sources:
+            secondary_sources.append("骨骼來源問題")
+        if has_ligament:
+            secondary_sources.append("韌帶 / 關節囊損傷或過度負荷" if is_young else "韌帶 / 關節囊問題（可能涉及退化性變化）")
+        if has_locking:
+            lock_map = {"knee": "關節內結構問題（如半月板）", "shoulder": "關節內結構問題（如關節唇）", "hip": "關節內結構問題（如髖關節唇）"}
+            if region in lock_map: secondary_sources.append(lock_map[region])
+            elif not spine: secondary_sources.append("關節內結構問題")
+        if has_muscle:
+            secondary_sources.append("肌筋膜疼痛（可能有引痛點）" if "按壓痛" in tissue_hits.get("muscle", []) else "肌肉性問題")
+
+        if not primary_sources and not secondary_sources:
+            secondary_sources.append("尚需進一步臨床評估才能確定" if (triggers or pain_quality) else "資訊不足，建議補充更多細節或現場評估")
+
+        # --- 2. 顯示 ---
+        st.markdown("##### 問題方向研判")
+        if primary_sources:
+            st.markdown("根據您提供的資料分析，您的症狀 **較大可能** 與以下問題有關：")
+            for src in primary_sources: st.markdown(f"- **{src}**")
+        if secondary_sources:
+            st.markdown("\n同時也需考慮以下可能涉及的因素：" if primary_sources else "根據您提供的資料分析，您的症狀 **可能** 與以下因素有關：")
+            for src in secondary_sources: st.markdown(f"- {src}")
+        st.write("")
+
+        # --- 3. 行動建議 ---
+        st.markdown("##### 行動建議")
+
+        if has_red_flags: level = "emergency"
+        elif has_fracture: level = "emergency"
+        elif has_vascular: level = "urgent"
+        elif spine and has_nerve_root and has_weakness: level = "urgent"
+        elif spine and has_nerve_root and spreading_expanding: level = "urgent"
+        elif vas_score >= 7: level = "urgent"
+        elif is_acute and high_irritability: level = "soon"
+        elif has_nerve_root or has_nerve: level = "soon"
+        elif has_sympathetic: level = "soon"
+        elif is_chronic and "沒有任何改善" in relievers: level = "comprehensive"
+        elif has_bone and "影響睡眠" in impacts: level = "soon"
+        elif vas_score >= 4: level = "moderate"
+        elif is_chronic: level = "chronic_mild"
+        else: level = "observe"
+
+        if level == "emergency":
+            st.error("**建議立即就醫**\n\n您的症狀中有需要立即排除嚴重問題的徵兆。請儘速前往醫療院所，由專科醫師進行詳細檢查。就醫前避免加劇疼痛的動作。")
+        elif level == "urgent":
+            st.warning("**建議盡快就醫（1-2 天內）**\n\n您的症狀組合顯示可能有需要積極處理的問題。建議盡快安排骨科、復健科或神經科門診。就醫前以舒適姿勢休息為主。\n\n可攜帶本報告截圖供醫療人員參考。")
+        elif level == "soon":
+            st.warning("**建議近期就醫或安排物理治療評估（一週內）**\n\n您的症狀需要專業評估以釐清確切問題。\n\n在就醫前可以：\n- 避免已知會加劇疼痛的動作\n- 維持日常輕度活動\n- 紀錄疼痛變化供就醫參考")
+        elif level == "comprehensive":
+            st.warning("**建議安排多面向評估**\n\n您的症狀已持續一段時間且尚未找到有效改善方式。建議考慮：\n- 復健科或疼痛科門診\n- 物理治療師完整動作評估\n- 若有睡眠或情緒困擾也建議一併處理")
+        elif level == "moderate":
+            if is_acute or is_subacute:
+                st.info(f"**建議觀察 3-5 天，若未改善則就醫**\n\n- 避免加劇動作\n- 維持適度日常活動\n- {'急性期可嘗試冰敷' if is_acute else '可嘗試熱敷或輕度伸展'}\n- 注意是否有擴大或加劇趨勢\n\n若 3-5 天後沒有改善或加重，建議就醫。")
             else:
-                st.info("**建議追蹤** — 中度疼痛，建議安排完整評估。")
+                st.info("**建議安排物理治療評估**\n\n症狀已持續一段時間，建議安排物理治療師進行完整評估，找出根本原因並建立漸進式訓練計畫。")
+        elif level == "chronic_mild":
+            st.success(f"**可持續觀察，建議適度活動**\n\n疼痛程度較輕但已持續一段時間。建議：\n- 透過適度且規律的活動來改善\n- {myo['self_care']}\n- 注意姿勢和使用習慣\n- 若加重再安排評估")
         else:
-            if is_chronic:
-                st.success("**持續觀察** — 疼痛程度較輕但已持續一段時間，可透過適度活動改善。")
-            else:
-                st.success("**持續觀察** — 疼痛程度較輕，先透過衛教與自我管理改善。")
+            st.success("**可持續觀察**\n\n疼痛程度較輕且處於初期。建議：\n- 避免加劇動作\n- 維持正常日常活動\n- 觀察 3-5 天，多數輕微問題會自行改善\n- 若加劇、範圍擴大或出現新症狀請就醫")
+
+        # --- 4. 依就醫紀錄調整 ---
+        if has_done_exam:
+            st.markdown("---")
+            st.markdown("##### 基於您的就醫紀錄")
+            if exam_result and "沒什麼大問題" in exam_result:
+                st.info("**您已做過檢查且結構正常** — 建議下一步以 **物理治療的功能性評估** 為主，著重動作分析、肌力評估與姿勢矯正，而非反覆影像檢查。")
+            elif exam_result and "有發現一些問題" in exam_result and exam_dx_detail:
+                st.info("**您已有初步診斷** — 建議攜帶過去的檢查報告，安排物理治療師針對已知診斷進行功能性評估與治療計畫。若症狀與過去診斷不一致，建議回診討論。")
+                if "照過 MRI / CT" in exam_history:
+                    st.caption("提醒：您已做過 MRI / CT，若症狀沒有明顯變化，通常不需要短期內重複檢查。")
+            elif exam_result and "還在等" in exam_result:
+                st.info("**報告待確認** — 建議優先回診確認檢查結果，再決定後續方向。")
+        else:
+            if level in ("emergency", "urgent", "soon"):
+                exam_suggestions = []
+                if has_fracture or has_bone: exam_suggestions.append("X 光（排除骨折或骨骼問題）")
+                if has_nerve_root and spine: exam_suggestions.append("MRI（評估椎間盤或椎管狀態）")
+                if has_nerve and region == "wrist_hand": exam_suggestions.append("神經傳導檢查 NCV/EMG（確認神經卡壓位置）")
+                if region == "shoulder" and has_weakness: exam_suggestions.append("超音波或 MRI（評估旋轉肌群）")
+                if exam_suggestions:
+                    st.markdown("**建議可考慮的檢查：**")
+                    for es in exam_suggestions: st.markdown(f"- {es}")
+                    st.caption("以上為初步建議，實際需要的檢查請由醫師判斷。")
 
         st.markdown("---")
         st.caption(
