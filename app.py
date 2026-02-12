@@ -112,17 +112,17 @@ def is_lower_limb(r): return r in ("hip", "knee", "ankle")
 
 
 PAIN_QUALITY_OPTIONS = [
-    "抽筋感 (Cramping) — 肌肉緊縮、抽住的感覺",
+   "抽筋感 (Cramping) — 肌肉緊縮、抽住的感覺",
     "鈍痛 (Dull) — 悶悶的、不尖銳的不舒服",
     "酸痛 (Aching) — 像運動後的痠、持續性的不適",
+    "淵痛 / 深部痛 (Deep/Nagging) — 來自深層、隱隱作痛、難以形容的「淵」",
+    "脹痛 / 壓迫感 (Pressure) — 像內部腫脹、有東西塞住或向下壓的感覺",
+    "震動痛 / 衝擊痛 (Vibration) — 腳踩地、坐車顛簸時骨頭深處會痛",
     "尖銳痛 (Sharp) — 像刀割、非常明確的痛感",
     "陣陣刺痛 (Shooting) — 一陣一陣竄過去的痛",
     "閃電般痛 (Lightning) — 像觸電、瞬間劇痛",
     "灼熱感 (Burning) — 像燒燙、熱辣辣的",
-    "有壓力感 (Pressure) — 悶脹、壓迫的感覺",
     "針蟄感 (Stinging) — 像被蟲蟄、表淺的刺痛",
-    "深部痛 (Deep) — 來自很深層、說不出確切位置",
-    "煩人的隱痛 (Nagging) — 持續存在、揮之不去",
     "尖銳且無法忍受 (Sharp & Intolerable) — 劇烈到無法承受",
     "抽痛 (Throbbing) — 隨心跳一跳一跳地痛",
     "擴散的 (Diffuse) — 範圍廣、界線不清楚",
@@ -130,21 +130,36 @@ PAIN_QUALITY_OPTIONS = [
 ]
 
 PAIN_TISSUE_MAP = {
-    "抽筋感": ["muscle"], "鈍痛": ["muscle", "ligament", "bone"],
-    "酸痛": ["muscle", "ligament", "sympathetic"],
-    "尖銳痛": ["nerve_root", "nerve", "fracture"], "陣陣刺痛": ["nerve_root"],
-    "閃電般痛": ["nerve"], "灼熱感": ["sympathetic"], "有壓力感": ["sympathetic"],
-    "針蟄感": ["sympathetic"], "深部痛": ["bone"], "煩人的隱痛": ["bone"],
-    "尖銳且無法忍受": ["fracture"], "抽痛": ["vascular"], "擴散的": ["vascular"],
-    "按壓痛": ["muscle"],
+   "抽筋感": ["muscle"], 
+    "鈍痛": ["muscle", "ligament", "bone"],
+    "酸痛": ["muscle", "ligament"],
+    "淵痛": ["bone", "ligament"], 
+    "深部痛": ["bone"],
+    "脹痛": ["bone", "ligament"], 
+    "有壓力感": ["bone", "ligament"],
+    "震動痛": ["bone", "fracture"],
+    "尖銳痛": ["nerve_root", "nerve", "fracture"], 
+    "陣陣刺痛": ["nerve_root"],
+    "閃電般痛": ["nerve"], 
+    "灼熱感": ["sympathetic"], 
+    "針蟄感": ["sympathetic"], 
+    "尖銳且無法忍受": ["fracture"], 
+    "抽痛": ["vascular"], 
+    "擴散的": ["vascular", "nerve_root"], 
+    "按壓痛": ["muscle", "bone"],
 }
 
 TISSUE_LABELS = {
-    "muscle": "肌肉 (Muscle)", "ligament": "韌帶 / 關節囊 (Ligament / Capsule)",
-    "nerve_root": "神經根 (Nerve Root)", "nerve": "周邊神經 (Peripheral Nerve)",
+    "muscle": "肌肉 (Muscle)", 
+    "ligament": "韌帶 / 關節囊 (Ligament / Capsule)",
+    "nerve_root": "神經根 (Nerve Root)", 
+    "nerve": "周邊神經 (Peripheral Nerve)",
     "sympathetic": "交感神經 / 神經病變 (Sympathetic / Neuropathic)",
-    "bone": "骨骼 (Bone)", "fracture": "骨折 (Fracture)", "vascular": "血管 (Vascular)",
+    "bone": "骨骼 (Bone)", 
+    "fracture": "疑似骨傷 / 骨裂 (Potential Bone Injury)", 
+     "vascular": "血管 (Vascular)",
 }
+
 
 TISSUE_CHIP = {
     "muscle": "chip-muscle", "ligament": "chip-ligament",
@@ -252,17 +267,17 @@ with st.form("intake_form"):
 
     st.markdown('<div class="section-label">這個問題持續多久了？</div>', unsafe_allow_html=True)
     duration = st.radio("請選擇最接近的時間範圍：", [
-        "剛發生（一週內）— 急性期 Acute",
-        "一陣子了（2 週 ~ 3 個月）— 亞急性期 Subacute",
-        "很久了（超過 3 個月）— 慢性期 Chronic",
+        "剛發生（一週內）",
+        "一陣子了（2 週 ~ 3 個月）",
+        "很久了（超過 3 個月）",
     ], index=0, horizontal=True)
 
     st.markdown('<div class="section-label">疼痛的刺激程度（Irritability）</div>', unsafe_allow_html=True)
     st.caption("幫助判斷目前組織的敏感程度")
     irritability = st.radio("請選擇最符合您的狀況：", [
-        "很容易被激發 — 輕微動作或還沒動就開始痛，且痛很久才消退",
-        "需要一定活動量才會痛 — 動一陣子才痛，休息後會改善",
-        "要比較大的動作才會痛 — 只有特定動作或大力時才不舒服",
+        "很容易被激發 （輕微動作或還沒動就開始痛），且痛很久才消退",
+        "需要一定活動量才會痛 （動一陣子才痛），休息後會改善",
+        "要比較大的動作才會痛 （只有特定動作或大力時才不舒服）",
     ], index=1)
 
     st.markdown('<div class="section-label">疼痛範圍有無變化？</div>', unsafe_allow_html=True)
@@ -631,9 +646,14 @@ if submit_btn:
                 st.markdown(f'<div class="{box_cls}">{label}</div>', unsafe_allow_html=True)
 
                 if tissue == "fracture":
-                    d = f"疼痛描述「{desc_str}」提示可能涉及 **骨折**。\n"
-                    if is_acute: d += "- 急性期若有外傷史，骨折可能性更高\n"
-                    d += "\n**建議：** 立即安排 X 光。"
+                    d = f"疼痛描述包含「{desc_str}」，這通常是 **骨骼結構受力異常** 的警訊。\n\n"
+                    d += "醫學上這歸類為骨骼損傷，可能的情況包含：\n"
+                    d += "- **骨挫傷 (Bone Bruise)**：骨頭內部的微出血或水腫（像骨頭瘀青），外觀看不出來，但對震動極度敏感。\n"
+                    d += "- **微細骨裂 (Hairline Fracture)**：骨頭上有細微裂縫，尚未完全斷裂。\n"
+                    d += "- **應力性骨折 (Stress Fracture)**：因反覆負重造成的細微損傷。\n"
+                    if is_acute: 
+                        d += "\n**判斷提示：** 由於您處於急性期且有此特徵，建議優先排除骨骼問題。\n"
+                        d += "\n**建議：** 為了安全起見，建議安排 **X 光檢查** 以確認骨骼的完整性，在此之前請避免跑跳或承受震動。"
                 elif tissue == "vascular":
                     d = f"疼痛描述「{desc_str}」提示可能涉及 **血管性** 問題。\n- 需排除 DVT、動脈供血不足\n\n**建議：** 合併腫脹或膚色改變，儘速就醫。"
                 elif tissue == "nerve_root":
@@ -665,18 +685,22 @@ if submit_btn:
                     if is_chronic: d += "\n慢性期出現此特徵，需注意中樞敏感化。\n"
                     d += "\n**建議：** 此類疼痛需疼痛科或神經科評估。"
                 elif tissue == "bone":
-                    d = f"疼痛描述「{desc_str}」提示可能涉及 **骨骼** 問題。\n"
-                    if is_young: d += "- 年輕族群考慮壓力性骨折（運動量突然增加）\n"
-                    else: d += "- 需考慮壓力性骨折、骨質疏鬆\n"
+                    d = f"疼痛描述「{desc_str}」提示可能涉及 **骨骼** 或 **深層結構** 問題。\n"
+                    if "震動痛" in descriptors:
+                        d += "★ **特別注意：** 您提到「震動/衝擊」會引發疼痛（如坐車、踏步），這是骨骼受力異常（如骨挫傷、微骨折）或關節受壓的典型徵兆。\n"
+                    if "脹痛" in descriptors or "有壓力感" in descriptors:
+                        d += "- **壓力感：** 可能代表骨內壓力增加，或深層空間有腫脹情形。\n"
+                    if is_young: d += "- 年輕族群考慮壓力性骨折（運動量突然增加）或骨挫傷\n"
+                    else: d += "- 中老年族群需考慮退化性磨損、壓力性骨折或骨質疏鬆\n"
                     if "影響睡眠" in impacts: d += "- 夜間骨骼痛需排除嚴重病理\n"
-                    d += "\n**建議：** 持續且負重加劇，安排 X 光。"
+                    d += "\n**建議：** 若負重或震動時疼痛明顯，建議優先安排 X 光檢查。"
+
                 elif tissue == "ligament":
-                    d = f"疼痛描述「{desc_str}」提示可能涉及 **韌帶或關節囊**。\n\n"
+                    d = f"疼痛描述「{desc_str}」提示可能涉及 **關節囊、韌帶或關節內部腫脹**。\n\n"
+                    if "脹痛" in descriptors or "有壓力感" in descriptors:
+                        d += "- **脹痛/壓力感：** 極可能代表關節內有積水（Effusion）或發炎腫脹，導致關節囊被撐開的感覺。\n"
                     d += f"- {pain_location} 可能相關：{jt['causes']}\n- {jt['note']}\n"
-                    if has_locking: d += "\n合併卡住感，需注意關節內結構。"
-                    if is_young: d += "\n\n您的年齡層較少退化性問題，通常與使用方式或過去受傷有關，透過訓練和調整通常能改善。"
-                    elif is_older and is_chronic and "走路 / 活動後改善" in relievers:
-                        d += "\n\n慢性期 + 活動後改善 → 退化性關節問題的晨僵模式值得注意。"
+                    if has_locking: d += "\n合併卡住感，需注意關節內結構（如軟骨、半月板）。"
                     d += "\n\n**建議：** 避免反覆刺激，適度活動有助關節健康。"
                 elif tissue == "muscle":
                     d = f"疼痛描述「{desc_str}」提示 **肌肉** 來源。\n\n- 常見肌群：{myo['muscles']}\n- 好發情境：{myo['common']}\n"
